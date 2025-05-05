@@ -1,9 +1,16 @@
 import React from 'react';
+import Navbar from '../../Components/Navbar/Navbar';
+import { Outlet } from 'react-router';
+import Footer from '../../Components/Footer/Footer';
 
 const Root = () => {
   return (
     <div>
-      <h1>This is root</h1>
+      <Navbar></Navbar>
+      <section className='h-screen'>
+        <Outlet></Outlet>
+      </section>
+      <Footer></Footer>
     </div>
   );
 };
