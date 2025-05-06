@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "https://i.ibb.co.com/QjcHLKN2/organic.jpg",
+    "name": "Organic Veggie Mix",
+    "techCategory": "Organic",
+    "price": "৳1599",
+    "frequency": "Weekly",
+    "reviews": 112,
+    "rating": 4.6,
+    "benefits": [
+      "Free doorstep delivery",
+      "Zero pesticides",
+      "Flexible skip option"
+    ],
+    "features": ["Certified Organic", "Fresh harvest", "Eco-packaging"],
+    "description": "Our Organic Veggie Mix box offers a curated selection of freshly harvested, nutrient-packed organic vegetables. Grown without harmful chemicals or pesticides, this box is ideal for anyone seeking clean, safe food choices. From farm to table, enjoy the best of nature while supporting sustainable farming."
+  },
+  {
+    "id": 2,
+    "thumbnail": "https://i.ibb.co.com/8gzCw0KX/family.jpg",
+    "name": "Family Veggie Box",
+    "techCategory": "Family Pack",
+    "price": "৳2999",
+    "frequency": "Weekly",
+    "reviews": 87,
+    "rating": 4.4,
+    "benefits": [
+      "Great for families of 4–6",
+      "Budget-friendly",
+      "Inclusive veggie mix"
+    ],
+    "features": [
+      "Large quantity",
+      "Staple & seasonal items",
+      "Family recipe suggestions"
+    ],
+    "description": "Designed for families, this box includes a generous mix of essential and seasonal vegetables ideal for weekly meal planning. It’s perfect for home cooks looking to create healthy, delicious meals without daily market visits."
+  },
+  {
+    "id": 3,
+    "thumbnail": "https://i.ibb.co.com/LXfM83cv/leafy-green.jpg",
+    "name": "Leafy Greens Box",
+    "techCategory": "Leafy Greens",
+    "price": "৳1250",
+    "frequency": "Weekly",
+    "reviews": 54,
+    "rating": 4.2,
+    "benefits": ["Great for salads", "Perfect for juicing", "High in vitamins"],
+    "features": ["Spinach", "Kale", "Lettuce", "Coriander"],
+    "description": "This box includes a fresh variety of leafy greens ideal for salads, juices, and healthy cooking. Rich in vitamins and antioxidants, it’s perfect for boosting immunity and improving digestion naturally."
+  },
+  {
+    "id": 4,
+    "thumbnail": "https://i.ibb.co.com/5g6Bpd1w/exotic.jpg",
+    "name": "Seasonal Pick Box",
+    "techCategory": "Seasonal Vegetables",
+    "price": "৳1875",
+    "frequency": "Bi-Weekly",
+    "reviews": 66,
+    "rating": 4.5,
+    "benefits": [
+      "Rotating selections",
+      "New veggies every time",
+      "Farm-to-door freshness"
+    ],
+    "features": ["Rotating vegetables", "Locally sourced", "Freshest picks"],
+    "description": "Celebrate each season with our rotating selection of in-season vegetables. Get the best local produce at its peak flavor and nutrition, making meals more diverse and exciting."
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://i.ibb.co.com/GvFDXPgY/fitness.jpg",
+    "name": "Fitness Veg Box",
+    "techCategory": "Low-Carb",
+    "price": "৳1699",
+    "frequency": "Weekly",
+    "reviews": 71,
+    "rating": 4.3,
+    "benefits": [
+      "Supports fitness goals",
+      "Low in carbs",
+      "Keto-friendly options"
+    ],
+    "features": ["Zucchini", "Broccoli", "Cauliflower", "Bell Peppers"],
+    "description": "Stay fit and energized with this low-carb veggie box, specially curated for fitness enthusiasts. Packed with high-fiber, low-calorie vegetables perfect for keto or weight loss diets."
+  },
+  {
+    "id": 6,
+    "thumbnail": "https://i.ibb.co.com/FLQtmCsx/exotic.jpg",
+    "name": "Exotic Veggie Box",
+    "techCategory": "Exotic",
+    "price": "৳2499",
+    "frequency": "Monthly",
+    "reviews": 49,
+    "rating": 4.7,
+    "benefits": [
+      "Explore rare vegetables",
+      "Perfect for chefs",
+      "Global cuisine ready"
+    ],
+    "features": [
+      "Asparagus",
+      "Zoodles",
+      "Colored carrots",
+      "Imported mushrooms"
+    ],
+    "description": "Take your cooking global with our Exotic Veggie Box featuring rare and premium vegetables sourced internationally. Ideal for gourmet meals and creative recipes."
+  },
+  {
+    "id": 7,
+    "thumbnail": "https://i.ibb.co.com/W4gmV79g/root.jpg",
+    "name": "Root Veggie Box",
+    "techCategory": "Root Vegetables",
+    "price": "৳1350",
+    "frequency": "Bi-Weekly",
+    "reviews": 38,
+    "rating": 4.1,
+    "benefits": ["Rich in fiber", "Great for roasting", "Long shelf life"],
+    "features": ["Potatoes", "Beets", "Carrots", "Radish"],
+    "description": "This box is packed with hearty root vegetables perfect for roasting, soups, and stews. They store well and are great for meal prepping and comfort food."
+  },
+  {
+    "id": 8,
+    "thumbnail": "https://i.ibb.co.com/1YKJZ5jD/quick-cook.jpg",
+    "name": "Quick Cook Box",
+    "techCategory": "Busy Professionals",
+    "price": "৳1450",
+    "frequency": "Weekly",
+    "reviews": 59,
+    "rating": 4.3,
+    "benefits": [
+      "Pre-washed items",
+      "Fast cooking veggies",
+      "Recipe cards included"
+    ],
+    "features": ["Pre-cut beans", "Baby carrots", "Spinach", "Cherry tomatoes"],
+    "description": "Ideal for busy professionals and students, this box includes fast-cooking, pre-washed veggies and simple recipes for quick, healthy meals after work."
+  },
+  {
+    "id": 9,
+    "thumbnail": "https://i.ibb.co.com/rGTx41zH/diabetic-friendly.jpg",
+    "name": "Diabetic-Friendly Box",
+    "techCategory": "Special Diet",
+    "price": "৳1399",
+    "frequency": "Weekly",
+    "reviews": 42,
+    "rating": 4.4,
+    "benefits": [
+      "Low glycemic index",
+      "Sugar control support",
+      "Nutritionist-approved"
+    ],
+    "features": ["Bitter gourd", "Spinach", "Okra", "Cauliflower"],
+    "description": "A box crafted with diabetic-friendly vegetables that support blood sugar control. Handpicked and approved by nutritionists for people managing diabetes or prediabetes."
+  },
+  {
+    "id": 10,
+    "thumbnail": "https://i.ibb.co.com/k7KPR0s/kids.jpg",
+    "name": "Kid-Friendly Box",
+    "techCategory": "Children's Nutrition",
+    "price": "৳1550",
+    "frequency": "Weekly",
+    "reviews": 33,
+    "rating": 4.2,
+    "benefits": [
+      "Mild flavor veggies",
+      "Fun-shaped cuts",
+      "Colorful and engaging"
+    ],
+    "features": [
+      "Baby corn",
+      "Mini carrots",
+      "Sweet potatoes",
+      "Cherry tomatoes"
+    ],
+    "description": "Encourage healthy eating habits with a box full of kid-approved veggies. Fun shapes, sweet flavors, and colorful options make meals fun and nutritious."
+  },
+  {
+    "id": 11,
+    "thumbnail": "https://i.ibb.co.com/1YMZ2mH5/imunity.jpg",
+    "name": "Immunity Booster Box",
+    "techCategory": "Wellness",
+    "price": "৳1650",
+    "frequency": "Weekly",
+    "reviews": 61,
+    "rating": 4.6,
+    "benefits": ["Vitamin C-rich", "Cold & flu defense", "Anti-inflammatory"],
+    "features": ["Bell peppers", "Garlic", "Ginger", "Turmeric roots"],
+    "description": "Boost your immune system with veggies high in antioxidants and natural healing properties. This box is perfect during flu season or for year-round health support."
+  },
+  {
+    "id": 12,
+    "thumbnail": "https://i.ibb.co.com/yFNCmzSd/student.jpg",
+    "name": "Budget Student Box",
+    "techCategory": "Student Budget",
+    "price": "৳999",
+    "frequency": "Weekly",
+    "reviews": 75,
+    "rating": 4.0,
+    "benefits": ["Affordable", "Easy to cook", "Nutritious on a budget"],
+    "features": ["Cabbage", "Potatoes", "Tomatoes", "Onions"],
+    "description": "Ideal for students and individuals on a tight budget. Affordable and packed with versatile veggies to cook quick, healthy meals without breaking the bank."
+  }
+]

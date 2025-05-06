@@ -3,29 +3,33 @@ import { NavLink } from 'react-router';
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-[#123524] text-white px-10 py-20">
+    <footer className="footer sm:footer-horizontal bg-[#123524] text-white px-10 py-28">
 
       {/* Left */}
       <aside>
-        <img className='w-20' src="../../../images/logo.png" alt="logo" />
-        <p className='text-2xl font-bold'>FreshiKart</p>
-        <p className='text-lg'>Trusted vegetable delivery, straight from local growers since 2025.</p>
+        <div className='flex justify-center items-center gap-3'>
+          <img className='w-8 lg:w-15' src="../../../images/logo.png" alt="logo" />
+          <div>
+            <p className='text-lg lg:text-2xl font-bold'>FreshiKart</p>
+          </div>
+        </div>
+        <p className='text-sm lg:text-lg'>Trusted vegetable delivery, straight from local growers since 2025.</p>
       </aside>
 
       {/* middle */}
       {/* links */}
       <div>
         <h6 className="footer-title">LINKS</h6>
-        <NavLink className={({ isActive }) => isActive ? 'underline' : ''} to={'/'}>Home</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'underline' : ''} to={'/subscription'}>Subscription Plans</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'underline' : ''} to={'/thisWeeksBox'}>This Week's Box</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : 'text-sm lg:text-lg'} to={'/'}>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : ' text-sm lg:text-lg'} to={'/subscription'}>Subscription Plans</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : 'text-sm lg:text-lg'} to={'/thisWeeksBox'}>This Week's Box</NavLink>
       </div>
       {/* legal */}
       <div>
         <h6 className="footer-title">LEGAL</h6>
-        <NavLink>Terms & Conditions </NavLink>
-        <NavLink>Privacy Policy </NavLink>
-        <NavLink>Refund & Delivery Policy</NavLink>
+        <NavLink className="text-sm lg:text-lg">Terms & Conditions </NavLink>
+        <NavLink className="text-sm lg:text-lg">Privacy Policy </NavLink>
+        <NavLink className="text-sm lg:text-lg">Refund & Delivery Policy</NavLink>
       </div>
 
       {/* right */}

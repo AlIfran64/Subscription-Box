@@ -8,7 +8,8 @@ const Root = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <section className='h-screen'>
+
+      <section className='min-h-screen'>
         <Outlet></Outlet>
       </section>
 

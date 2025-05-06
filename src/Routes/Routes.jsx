@@ -12,7 +12,13 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home></Home>
+        element: <Home></Home>,
+        hydrateFallbackElement: (
+          <div className='w-11/12 h-screen mx-auto flex justify-center items-center py-3 rounded-2xl'>
+            <span className="loading loading-spinner loading-lg"></span>
+          </div>
+        ),
+        loader: () => fetch('../../JSON Data/SubscriptionService/subscriptionService.json')
       },
       {
         path: '/subscription',
