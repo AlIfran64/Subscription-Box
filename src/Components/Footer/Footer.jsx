@@ -13,7 +13,7 @@ const Footer = () => {
             <p className='text-lg lg:text-2xl font-bold'>FreshiKart</p>
           </div>
         </div>
-        <p className='text-sm lg:text-lg'>Trusted vegetable delivery, straight from local growers since 2025.</p>
+        <p className='text-sm lg:text-lg'>Trusted vegetable delivery, straight from <br /> local growers since 2025.</p>
       </aside>
 
       {/* middle */}

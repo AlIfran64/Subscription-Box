@@ -8,7 +8,7 @@ const SubscriptionServices = () => {
   const data = useLoaderData();
 
   // sliced data
-  const initialData = data.slice(0, 3);
+  const initialData = data.slice(0, 6);
 
   // State for displaying data and toggle status
   const [viewAll, setViewAll] = useState(false);
