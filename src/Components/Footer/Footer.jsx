@@ -1,13 +1,34 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal bg-[#123524] text-white px-10 py-20">
+
+      {/* Left */}
       <aside>
         <img className='w-20' src="../../../images/logo.png" alt="logo" />
         <p className='text-2xl font-bold'>FreshiKart</p>
         <p className='text-lg'>Trusted vegetable delivery, straight from local growers since 2025.</p>
       </aside>
+
+      {/* middle */}
+      {/* links */}
+      <div>
+        <h6 className="footer-title">LINKS</h6>
+        <NavLink className={({ isActive }) => isActive ? 'underline' : ''} to={'/'}>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline' : ''} to={'/subscription'}>Subscription Plans</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline' : ''} to={'/thisWeeksBox'}>This Week's Box</NavLink>
+      </div>
+      {/* legal */}
+      <div>
+        <h6 className="footer-title">LEGAL</h6>
+        <NavLink>Terms & Conditions </NavLink>
+        <NavLink>Privacy Policy </NavLink>
+        <NavLink>Refund & Delivery Policy</NavLink>
+      </div>
+
+      {/* right */}
       <nav>
         <h6 className="footer-title">Social</h6>
         <div className="grid grid-flow-col gap-4">

@@ -19,9 +19,9 @@ const Navbar = () => {
 
             {/* Mobile view */}
 
-            <NavLink to={'/'} className={({ isActive }) => isActive ? 'mx-1 px-6 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>Home</NavLink>
-            <NavLink to={'/subscription'} className={({ isActive }) => isActive ? 'mx-1 px-6 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>Subscription Plans</NavLink>
-            <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? 'mx-1 px-6 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>This Week's Box</NavLink>
+            <NavLink to={'/'} className={({ isActive }) => isActive ? 'px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>Home</NavLink>
+            <NavLink to={'/subscription'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
+            <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
           </ul>
         </div>
         <Link className="btn btn-ghost text-xl">
@@ -36,13 +36,16 @@ const Navbar = () => {
 
           {/* Desktop view */}
 
-          <NavLink to={'/'} className={({ isActive }) => isActive ? 'mx-1 px-6 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>Home</NavLink>
-          <NavLink to={'/subscription'} className={({ isActive }) => isActive ? 'mx-1 px-6 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>Subscription Plans</NavLink>
-          <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? 'mx-1 px-6 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>This Week's Box</NavLink>
+          <NavLink to={'/'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Home</NavLink>
+          <NavLink to={'/subscription'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
+          <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
         </ul>
       </div>
+
+      {/* buttons */}
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <img className='w-10 mr-3' src="../../../images/user.png" alt="" />
+        <Link className="px-4 py-2 border-2 font-medium border-[#123524] hover:bg-[#123524] hover:text-white rounded-sm text-[#123524]">Login</Link>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import { Outlet } from 'react-router';
 import Footer from '../../Components/Footer/Footer';
+import Copyrights from '../../Components/Copyrights/Copyrights';
 
 const Root = () => {
   return (
@@ -10,7 +11,11 @@ const Root = () => {
       <section className='h-screen'>
         <Outlet></Outlet>
       </section>
-      <Footer></Footer>
+
+      <footer>
+        <Footer></Footer>
+        <Copyrights></Copyrights>
+      </footer>
     </div>
   );
 };
