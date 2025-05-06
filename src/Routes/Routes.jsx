@@ -3,6 +3,7 @@ import Root from "../Layouts/Root/Root";
 import Home from "../Layouts/Home/Home";
 import SubscriptionPlans from "../Layouts/SubscriptionPlans/SubscriptionPlans";
 import ThisWeeksBox from "../Layouts/ThisWeeksBox/ThisWeeksBox";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
         element: <ThisWeeksBox></ThisWeeksBox>
       }
     ]
+  },
+  {
+    path: '/*',
+    element: <ErrorPage></ErrorPage>
   }
 
 

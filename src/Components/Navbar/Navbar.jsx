@@ -44,8 +44,8 @@ const Navbar = () => {
 
       {/* buttons */}
       <div className="navbar-end">
-        <img className='w-10 mr-3' src="../../../images/user.png" alt="" />
-        <Link className="px-4 py-2 border-2 font-medium border-[#123524] hover:bg-[#123524] hover:text-white rounded-sm text-[#123524]">Login</Link>
+        <img className='w-10 mr-3' src="../../../images/user.png" alt="user image" />
+        <Link className="px-6 py-2 border-2 font-medium border-[#123524] hover:bg-[#123524] hover:text-white rounded-sm text-[#123524] text-sm">Login</Link>
       </div>
     </div>
   );
