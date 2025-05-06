@@ -5,7 +5,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,9 +19,9 @@ const Navbar = () => {
 
             {/* Mobile view */}
 
-            <NavLink to={'/'} className={({ isActive }) => isActive ? 'px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-3 py-2'}>Home</NavLink>
-            <NavLink to={'/subscription'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
-            <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
+            <NavLink to={'/'} className={({ isActive }) => isActive ? 'px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Home</NavLink>
+            <NavLink to={'/subscription'} className={({ isActive }) => isActive ? ' px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
+            <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? ' px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
           </ul>
         </div>
         <Link className="btn btn-ghost text-xl">

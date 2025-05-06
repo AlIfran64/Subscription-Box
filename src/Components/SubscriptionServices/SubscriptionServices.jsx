@@ -22,7 +22,7 @@ const SubscriptionServices = () => {
     <div>
       <h1 className='text-4xl font-bold mb-10'>Subscription Services</h1>
 
-      <div className='grid grid-cols-1 lg:grid-cols-3 justify-center place-items-center gap-8'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 justify-center place-items-center gap-10'>
         {
           (viewAll ? data : initialData).map((singleData, index) => (
             <SubscriptionServiceCard key={index} singleData={singleData} />

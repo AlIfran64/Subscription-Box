@@ -7,8 +7,8 @@ const SubscriptionServiceCard = ({ singleData }) => {
   const { thumbnail, name, techCategory, description, frequency, price, rating } = singleData;
 
   return (
-    <div className='border border-gray-300 p-6 rounded-xl shadow-xl'>
-      <img className='w-[600px] h-[250px] object-cover rounded-xl' src={thumbnail} alt="" />
+    <div className='border border-gray-300 p-5 rounded-xl shadow-xl'>
+      <img className='w-full h-[250px] object-cover rounded-xl' src={thumbnail} alt="" />
 
       <div className='flex justify-start items-center gap-4 my-4'>
         <p className='text-2xl font-semibold'>{name}</p>
