@@ -5,6 +5,9 @@ import SubscriptionPlans from "../Layouts/SubscriptionPlans/SubscriptionPlans";
 import ThisWeeksBox from "../Layouts/ThisWeeksBox/ThisWeeksBox";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import SubscriptionServiceDetails from "../Pages/SubscriptionServiceDetails/SubscriptionServiceDetails";
+import Payment from "../Pages/Payment/Payment";
+
+
 
 export const router = createBrowserRouter([
   {
@@ -44,7 +47,12 @@ export const router = createBrowserRouter([
           </div>
         ),
         loader: () => fetch('../../JSON Data/SubscriptionService/subscriptionService.json')
+      },
+      {
+        path: '/payment',
+        element: <Payment></Payment>
       }
+
     ]
   },
   {

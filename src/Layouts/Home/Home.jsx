@@ -3,11 +3,19 @@ import Banner from '../../Components/Banner/Banner';
 import SubscriptionServices from '../../Components/SubscriptionServices/SubscriptionServices';
 import WhyChooseUs from '../../Components/WhyChooseUs/WhyChooseUs';
 import Faqs from '../../Components/Faqs/Faqs';
+import { Helmet } from 'react-helmet-async';
+
 
 
 const Home = () => {
+  const home = 'Home'
   return (
     <div>
+
+      <Helmet>
+        <title>{home}</title>
+      </Helmet>
+
       <Banner></Banner>
 
       <div className='w-11/12 mx-auto my-20 lg:my-40'>

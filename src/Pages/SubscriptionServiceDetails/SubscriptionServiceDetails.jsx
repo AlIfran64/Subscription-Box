@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { Helmet } from 'react-helmet-async';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SubscriptionServiceDetails = () => {
   const data = useLoaderData();
@@ -16,12 +19,12 @@ const SubscriptionServiceDetails = () => {
   const handleReviewSubmit = () => {
     const numericRating = parseFloat(reviewRating);
     if (!reviewText.trim()) {
-      alert('Please enter a review.');
+      toast.error('Please enter a review.');
       return;
     }
 
     if (isNaN(numericRating) || numericRating < 1 || numericRating > 5) {
-      alert('Rating must be a number between 1 and 5.');
+      toast.error('Rating must be a number between 1 and 5.');
       return;
     }
 
@@ -34,12 +37,21 @@ const SubscriptionServiceDetails = () => {
     setReviews([newReview, ...reviews]);
     setReviewText('');
     setReviewRating('');
+    toast.success('Review submitted successfully!');
   };
+
+  const details = 'Subscription Service Details';
 
   return (
     <div className='w-11/12 mx-auto'>
+      <Helmet>
+        <title>{details}</title>
+      </Helmet>
       <h1 className='text-4xl font-bold mb-5 mt-10 text-center'>Subscription Service Details</h1>
-      <p className='text-center mb-10'>Get all the details about your selected subscription box, including the fresh ingredients, delivery schedule, and special features <br /> crafted for your lifestyle.</p>
+      <p className='text-center mb-10'>
+        Get all the details about your selected subscription box, including the fresh ingredients, delivery schedule, and special features <br />
+        crafted for your lifestyle.
+      </p>
 
       <div className='bg-neutral-50 p-10 border-2 border-neutral-300 shadow-xl rounded-2xl flex flex-col lg:flex-row justify-center items-stretch gap-8'>
         {/* left */}
@@ -113,6 +125,7 @@ const SubscriptionServiceDetails = () => {
             >
               Submit Review
             </button>
+            <ToastContainer />
           </div>
         </div>
       </div>
