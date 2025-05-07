@@ -21,12 +21,15 @@ const Login = () => {
     // get data from input
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+
 
     // log in
     userLogin(email, password).then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+      console.log(user);
+
+
       navigate(`${location.state ? location.state : '/'}`)
 
       toast.success("Login Successful!")

@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDAl8To1dWnwT2WVZwNiP59QE4xKEwoOrE",
-  authDomain: "subscription-box-freshikart.firebaseapp.com",
-  projectId: "subscription-box-freshikart",
-  storageBucket: "subscription-box-freshikart.firebasestorage.app",
-  messagingSenderId: "692495396737",
-  appId: "1:692495396737:web:3a241aff959ae905ec8280",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 // Initialize Firebase

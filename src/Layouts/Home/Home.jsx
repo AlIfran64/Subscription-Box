@@ -7,8 +7,10 @@ import { Helmet } from 'react-helmet-async';
 
 
 
+
 const Home = () => {
   const home = 'FreshiKart | Home'
+
   return (
     <div>
 

@@ -1,16 +1,21 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigation } from 'react-router';
 import Footer from '../../Components/Footer/Footer';
 import Copyrights from '../../Components/Copyrights/Copyrights';
 
 const Root = () => {
+  const { state } = useNavigation();
   return (
     <div>
       <Navbar></Navbar>
 
       <section className='min-h-screen'>
-        <Outlet></Outlet>
+        {state == 'loading' ? <div className='w-11/12 h-screen mx-auto flex justify-center items-center py-3 rounded-2xl'>
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+          :
+          <Outlet></Outlet>}
       </section>
 
       <footer className="relative">
