@@ -6,6 +6,9 @@ import ThisWeeksBox from "../Layouts/ThisWeeksBox/ThisWeeksBox";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import SubscriptionServiceDetails from "../Pages/SubscriptionServiceDetails/SubscriptionServiceDetails";
 import Payment from "../Pages/Payment/Payment";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
@@ -40,7 +43,9 @@ export const router = createBrowserRouter([
       },
       {
         path: '/subscriptionServiceDetails/:id',
-        element: <SubscriptionServiceDetails></SubscriptionServiceDetails>,
+        element: <PrivateRoutes>
+          <SubscriptionServiceDetails></SubscriptionServiceDetails>
+        </PrivateRoutes>,
         hydrateFallbackElement: (
           <div className='w-11/12 h-screen mx-auto flex justify-center items-center py-3 rounded-2xl'>
             <span className="loading loading-spinner loading-lg"></span>
@@ -50,7 +55,17 @@ export const router = createBrowserRouter([
       },
       {
         path: '/payment',
-        element: <Payment></Payment>
+        element: <PrivateRoutes>
+          <Payment></Payment>
+        </PrivateRoutes>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
 
     ]
