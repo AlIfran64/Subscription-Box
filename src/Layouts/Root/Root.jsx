@@ -13,9 +13,19 @@ const Root = () => {
         <Outlet></Outlet>
       </section>
 
-      <footer>
-        <Footer></Footer>
-        <Copyrights></Copyrights>
+      <footer className="relative">
+        <div className="relative w-full">
+          <img
+            className="w-full object-cover"
+            src="../../../images/flat-lay-vegetables-frame-with-copy-space.jpg"
+            alt="Vegetables frame"
+          />
+          <div
+            className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-white via-transparent to-transparent"
+          ></div>
+        </div>
+        <Footer />
+        <Copyrights />
       </footer>
     </div>
   );

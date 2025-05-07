@@ -4,6 +4,7 @@ import Home from "../Layouts/Home/Home";
 import SubscriptionPlans from "../Layouts/SubscriptionPlans/SubscriptionPlans";
 import ThisWeeksBox from "../Layouts/ThisWeeksBox/ThisWeeksBox";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import SubscriptionServiceDetails from "../Pages/SubscriptionServiceDetails/SubscriptionServiceDetails";
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +27,23 @@ export const router = createBrowserRouter([
       },
       {
         path: '/thisWeeksBox',
-        element: <ThisWeeksBox></ThisWeeksBox>
+        element: <ThisWeeksBox></ThisWeeksBox>,
+        hydrateFallbackElement: (
+          <div className='w-11/12 h-screen mx-auto flex justify-center items-center py-3 rounded-2xl'>
+            <span className="loading loading-spinner loading-lg"></span>
+          </div>
+        ),
+        loader: () => fetch('../../JSON Data/SubscriptionService/subscriptionService.json')
+      },
+      {
+        path: '/subscriptionServiceDetails/:id',
+        element: <SubscriptionServiceDetails></SubscriptionServiceDetails>,
+        hydrateFallbackElement: (
+          <div className='w-11/12 h-screen mx-auto flex justify-center items-center py-3 rounded-2xl'>
+            <span className="loading loading-spinner loading-lg"></span>
+          </div>
+        ),
+        loader: () => fetch('../../JSON Data/SubscriptionService/subscriptionService.json')
       }
     ]
   },

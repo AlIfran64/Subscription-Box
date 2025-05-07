@@ -4,7 +4,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 const SubscriptionServiceCard = ({ singleData }) => {
 
-  const { thumbnail, name, techCategory, description, frequency, price, rating } = singleData;
+  const { thumbnail, name, techCategory, description, frequency, price, rating, id } = singleData;
 
   return (
     <div className='border border-gray-300 p-5 rounded-xl shadow-xl'>
@@ -57,8 +57,8 @@ const SubscriptionServiceCard = ({ singleData }) => {
 
 
 
-      <Link>
-        <button className='w-full py-3 bg-[#123524] text-white rounded-lg mt-5 font-semibold'>View more</button>
+      <Link to={`/subscriptionServiceDetails/${id}`}>
+        <button className='w-full py-3 bg-[#123524] text-white rounded-lg mt-5 font-semibold cursor-pointer'>View more</button>
       </Link>
     </div >
   );
