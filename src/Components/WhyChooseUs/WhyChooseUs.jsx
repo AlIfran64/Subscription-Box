@@ -1,12 +1,11 @@
 import React from 'react';
-import img4 from '../../../public/images/vegetables-wooden-table_199223-1352.jpg';
 
 const WhyChooseUs = () => {
   return (
     <section
       className="relative px-6 py-16 rounded-xl"
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(${img4})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/images/vegetables-wooden-table_199223-1352.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
