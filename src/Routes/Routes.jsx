@@ -9,6 +9,7 @@ import Payment from "../Pages/Payment/Payment";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import MyProfile from "../Layouts/MyProfile/MyProfile";
 
 
 
@@ -28,12 +29,14 @@ export const router = createBrowserRouter([
         loader: () => fetch('../../JSON Data/SubscriptionService/subscriptionService.json')
       },
       {
-        path: '/subscription',
+        path: '/SubscriptionPlans',
         element: <SubscriptionPlans></SubscriptionPlans>
       },
       {
-        path: '/thisWeeksBox',
-        element: <ThisWeeksBox></ThisWeeksBox>,
+        path: '/ThisWeeksBox',
+        element: <PrivateRoutes>
+          <ThisWeeksBox></ThisWeeksBox>
+        </PrivateRoutes>,
         hydrateFallbackElement: (
           <div className='w-11/12 h-screen mx-auto flex justify-center items-center py-3 rounded-2xl'>
             <span className="loading loading-spinner loading-lg"></span>
@@ -42,7 +45,11 @@ export const router = createBrowserRouter([
         loader: () => fetch('../../JSON Data/SubscriptionService/subscriptionService.json')
       },
       {
-        path: '/subscriptionServiceDetails/:id',
+        path: '/MyProfile',
+        element: <MyProfile></MyProfile>
+      },
+      {
+        path: '/SubscriptionServiceDetails/:id',
         element: <PrivateRoutes>
           <SubscriptionServiceDetails></SubscriptionServiceDetails>
         </PrivateRoutes>,
@@ -54,17 +61,17 @@ export const router = createBrowserRouter([
         loader: () => fetch('../../JSON Data/SubscriptionService/subscriptionService.json')
       },
       {
-        path: '/payment',
+        path: '/Payment',
         element: <PrivateRoutes>
           <Payment></Payment>
         </PrivateRoutes>
       },
       {
-        path: '/login',
+        path: '/Login',
         element: <Login></Login>
       },
       {
-        path: '/register',
+        path: '/Register',
         element: <Register></Register>
       }
 

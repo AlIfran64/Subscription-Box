@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { useLoaderData, useLocation, useParams } from 'react-router';
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { Helmet } from 'react-helmet-async';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SubscriptionServiceDetails = () => {
@@ -40,12 +40,12 @@ const SubscriptionServiceDetails = () => {
     toast.success('Review submitted successfully!');
   };
 
-  const details = 'Subscription Service Details';
+  const location = useLocation();
 
   return (
     <div className='w-11/12 mx-auto'>
       <Helmet>
-        <title>{details}</title>
+        <title>FreshiKart{location.pathname}</title>
       </Helmet>
       <h1 className='text-4xl font-bold mb-5 mt-10 text-center'>Subscription Service Details</h1>
       <p className='text-center mb-10'>
@@ -125,7 +125,7 @@ const SubscriptionServiceDetails = () => {
             >
               Submit Review
             </button>
-            <ToastContainer />
+
           </div>
         </div>
       </div>

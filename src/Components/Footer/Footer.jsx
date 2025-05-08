@@ -21,8 +21,8 @@ const Footer = () => {
       <div>
         <h6 className="footer-title">LINKS</h6>
         <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : 'text-sm lg:text-lg'} to={'/'}>Home</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : ' text-sm lg:text-lg'} to={'/subscription'}>Subscription Plans</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : 'text-sm lg:text-lg'} to={'/thisWeeksBox'}>This Week's Box</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : ' text-sm lg:text-lg'} to={'/SubscriptionPlans'}>Subscription Plans</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'underline text-sm lg:text-lg' : 'text-sm lg:text-lg'} to={'/ThisWeeksBox'}>This Week's Box</NavLink>
       </div>
       {/* legal */}
       <div>

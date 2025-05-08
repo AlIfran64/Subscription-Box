@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 const SubscriptionPlans = () => {
 
-  const plans = 'Subscription Plans'
+  const location = useLocation();
   return (
     <div className='w-11/12 mx-auto mt-10 mb-20'>
       <Helmet>
-        <title>{plans}</title>
+        <title>FreshiKart{location.pathname}</title>
       </Helmet>
       <h1 className='text-4xl font-bold mb-5 text-center'>Subscription Plans</h1>
       <p className='text-center mb-15'>Healthy, affordable, and fresh vegetables delivered to your doorstep.</p>
@@ -43,7 +43,7 @@ const SubscriptionPlans = () => {
               </li>
 
             </ul>
-            <Link to={'/payment'}>
+            <Link to={'/Payment'}>
               <div className="mt-6">
                 <button className="btn bg-[#123524] text-white btn-block">Subscribe</button>
               </div>
@@ -84,7 +84,7 @@ const SubscriptionPlans = () => {
               </li>
 
             </ul>
-            <Link to={'/payment'}>
+            <Link to={'/Payment'}>
               <div className="mt-6">
                 <button className="btn bg-[#123524] text-white btn-block">Subscribe</button>
               </div>
@@ -125,7 +125,7 @@ const SubscriptionPlans = () => {
               </li>
 
             </ul>
-            <Link to={'/payment'}>
+            <Link to={'/Payment'}>
               <div className="mt-6">
                 <button className="btn bg-[#123524] text-white btn-block">Subscribe</button>
               </div>

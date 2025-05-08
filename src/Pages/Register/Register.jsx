@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../ContextProvider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 
@@ -9,7 +9,7 @@ const Register = () => {
 
 
   const { userRegister, setUser, userUpdate } = useContext(AuthContext);
-  const register = "Register"
+  const register = useLocation();
 
 
   const navigate = useNavigate();
@@ -19,39 +19,51 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    // get input data
     const name = e.target.name.value;
     const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // Register
-    userRegister(email, password).then((userCredential) => {
-      // Signed up 
-      const user = userCredential.user;
-      toast.success("Registration Completed!");
-      userUpdate({ displayName: name, photoURL: photo }).then(() => {
-        // Profile updated!
-        setUser({ ...user, displayName: name, photoURL: photo });
-        navigate('/');
-        toast.success('Profile updated!')
-        // ...
-      }).catch((error) => {
-        // An error occurred
-        toast.error(error);
-        setUser(user);
-        // ...
-      });;
+    // Password validation
+    const uppercaseRegex = /[A-Z]/;
+    const lowercaseRegex = /[a-z]/;
 
-      // ...
-    })
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters long.");
+      return;
+    }
+
+    if (!uppercaseRegex.test(password)) {
+      toast.error("Password must contain at least one uppercase letter.");
+      return;
+    }
+
+    if (!lowercaseRegex.test(password)) {
+      toast.error("Password must contain at least one lowercase letter.");
+      return;
+    }
+
+    // Proceed with registration
+    userRegister(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        toast.success("Registration Completed!");
+
+        userUpdate({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+            navigate('/');
+            toast.success('Profile updated!');
+          })
+          .catch((error) => {
+            toast.error(error.message);
+            setUser(user);
+          });
+      })
       .catch((error) => {
-        const errorMessage = error.message;
-        toast.error(errorMessage)
-        // ..
+        toast.error(error.message);
       });
-
-  }
+  };
 
 
 
@@ -59,7 +71,7 @@ const Register = () => {
   return (
     <div>
       <Helmet>
-        <title>{register}</title>
+        <title>FreshiKart{register.pathname}</title>
       </Helmet>
       <div className="hero  min-h-screen">
         <div className=" flex-col lg:flex-row-reverse">
@@ -92,11 +104,11 @@ const Register = () => {
                 </button>
 
                 <button type='submit' className="btn bg-[#123524] text-white py-4 w-full">Register</button>
-                <ToastContainer />
+
               </form>
 
               {/* go to register */}
-              <p className='mt-2 text-center'>Already have an account? Please <Link to={'/login'} className='font-semibold text-[#123524]'>Login.</Link></p>
+              <p className='mt-2 text-center'>Already have an account? Please <Link to={'/Login'} className='font-semibold text-[#123524]'>Login.</Link></p>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../ContextProvider/AuthProvider';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 const Navbar = () => {
@@ -36,8 +36,11 @@ const Navbar = () => {
             {/* Mobile view */}
 
             <NavLink to={'/'} className={({ isActive }) => isActive ? 'px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Home</NavLink>
-            <NavLink to={'/subscription'} className={({ isActive }) => isActive ? ' px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
-            <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? ' px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
+            <NavLink to={'/SubscriptionPlans'} className={({ isActive }) => isActive ? ' px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
+            <NavLink to={'/ThisWeeksBox'} className={({ isActive }) => isActive ? ' px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
+            {
+              user && <NavLink to={'/MyProfile'} className={({ isActive }) => isActive ? ' px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>My Profile</NavLink>
+            }
           </ul>
         </div>
         <Link className="btn btn-ghost text-xl">
@@ -53,29 +56,37 @@ const Navbar = () => {
           {/* Desktop view */}
 
           <NavLink to={'/'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Home</NavLink>
-          <NavLink to={'/subscription'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
-          <NavLink to={'/thisWeeksBox'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
+          <NavLink to={'/SubscriptionPlans'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>Subscription Plans</NavLink>
+          <NavLink to={'/ThisWeeksBox'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>This Week's Box</NavLink>
+          {
+            user && <NavLink to={'/MyProfile'} className={({ isActive }) => isActive ? 'mx-1 px-4 py-2 bg-[#123524] text-white rounded-sm' : ' px-4 py-2'}>My Profile</NavLink>
+          }
         </ul>
       </div>
 
       {/* buttons */}
       <div className="navbar-end">
         {
-          user && <img className='w-10 mr-3 rounded-full' src={user.
+          user && <img className='w-11 h-11 mr-3 rounded-full' src={user.
             photoURL
-          } alt="user image" />
+          } alt="user image" title={user.displayName} />
+
         }
 
         {
           user ?
             <button onClick={handleLogout} className="px-6 py-2 border-2 font-medium border-[#123524] hover:bg-[#123524] hover:text-white rounded-sm text-[#123524] text-sm cursor-pointer">Logout</button>
 
+
             :
 
-            <Link to={'/login'} className="px-6 py-2 border-2 font-medium border-[#123524] hover:bg-[#123524] hover:text-white rounded-sm text-[#123524] text-sm">Login</Link>
+            <Link to={'/Login'} className="px-6 py-2 border-2 font-medium border-[#123524] hover:bg-[#123524] hover:text-white rounded-sm text-[#123524] text-sm">Login</Link>
         }
 
+
+
       </div>
+
     </div>
   );
 };

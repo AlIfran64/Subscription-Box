@@ -57,7 +57,7 @@ const SubscriptionServiceCard = ({ singleData }) => {
 
 
 
-      <Link to={`/subscriptionServiceDetails/${id}`}>
+      <Link to={`/SubscriptionServiceDetails/${id}`}>
         <button className='w-full py-3 bg-[#123524] text-white rounded-lg mt-5 font-semibold cursor-pointer'>View more</button>
       </Link>
     </div >

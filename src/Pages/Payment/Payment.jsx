@@ -1,12 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router";
 
 const Payment = () => {
-  const payment = "Payment"
+  const location = useLocation();
   return (
     <section className="py-8 antialiased md:py-16 w-11/12 mt-15 mx-auto bg-[#f5f8f6]">
       <Helmet>
-        <title>{payment}</title>
+        <title>Subscription Plans{location.pathname}</title>
       </Helmet>
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
         <div className="mx-auto max-w-5xl">

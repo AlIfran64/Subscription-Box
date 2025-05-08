@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
 const ErrorPage = () => {
   return (
     <div className='h-screen flex justify-center items-center'>
+      <Helmet>
+        <title>Error</title>
+      </Helmet>
       <div>
         <img className='w-[400px]' src="../../../images/error.png" alt="error image" />
         <p className='text-center font-bold text-3xl'>Ops! Page not found.</p>

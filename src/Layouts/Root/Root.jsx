@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import { Outlet, useNavigation } from 'react-router';
 import Footer from '../../Components/Footer/Footer';
 import Copyrights from '../../Components/Copyrights/Copyrights';
+import { ToastContainer } from 'react-toastify';
 
 const Root = () => {
   const { state } = useNavigation();
@@ -32,7 +33,9 @@ const Root = () => {
         <Footer />
         <Copyrights />
       </footer>
+      <ToastContainer></ToastContainer>
     </div>
+
   );
 };
 

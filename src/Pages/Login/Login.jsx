@@ -6,7 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
-  const login = "Log In"
+  const login = useLocation();
 
   // get location
   const location = useLocation();
@@ -28,11 +28,8 @@ const Login = () => {
       // Signed in 
       const user = userCredential.user;
       console.log(user);
-
-
       navigate(`${location.state ? location.state : '/'}`)
-
-      toast.success("Login Successful!")
+      toast.success("Login Successful!");
       // ...
     })
       .catch((error) => {
@@ -43,7 +40,7 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>{login}</title>
+        <title>FreshiKart{login.pathname}</title>
       </Helmet>
       <div className="hero  min-h-screen">
         <div className=" flex-col lg:flex-row-reverse">
@@ -71,11 +68,11 @@ const Login = () => {
                 </button>
 
                 <button type='submit' className="btn bg-[#123524] text-white py-4 w-full">Login</button>
-                <ToastContainer />
+
               </form>
 
               {/* go to register */}
-              <p className='mt-2 text-center'>Didn't have an account? Please <Link to={'/register'} className='font-semibold text-[#123524]'>Register.</Link></p>
+              <p className='mt-2 text-center'>Didn't have an account? Please <Link to={'/Register'} className='font-semibold text-[#123524]'>Register.</Link></p>
             </div>
           </div>
         </div>

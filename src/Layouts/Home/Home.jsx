@@ -4,18 +4,21 @@ import SubscriptionServices from '../../Components/SubscriptionServices/Subscrip
 import WhyChooseUs from '../../Components/WhyChooseUs/WhyChooseUs';
 import Faqs from '../../Components/Faqs/Faqs';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router';
 
 
 
 
 const Home = () => {
-  const home = 'FreshiKart | Home'
+  // const home = 'FreshiKart | Home'
+
+  const location = useLocation();
 
   return (
     <div>
 
       <Helmet>
-        <title>{home}</title>
+        <title>FreshiKart{location.pathname}Home</title>
       </Helmet>
 
       <Banner></Banner>
