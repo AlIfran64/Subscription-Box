@@ -46,7 +46,9 @@ export const router = createBrowserRouter([
       },
       {
         path: '/MyProfile',
-        element: <MyProfile></MyProfile>
+        element: <PrivateRoutes>
+          <MyProfile></MyProfile>
+        </PrivateRoutes>
       },
       {
         path: '/SubscriptionServiceDetails/:id',
