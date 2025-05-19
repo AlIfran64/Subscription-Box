@@ -42,13 +42,13 @@ npm run dev
 
 ## NPM Packages Used
 
-npm create vite@latest subscription-box-freshikart -- --template react
-npm install tailwindcss @tailwindcss/vite
-npm i -D daisyui@latest
-npm i react-router
-npm i swiper
-npm i react-icons
-npm install react-helmet-async
-npm i react-toastify
-npm install firebase
+- npm create vite@latest subscription-box-freshikart -- --template react
+- npm install tailwindcss @tailwindcss/vite
+- npm i -D daisyui@latest
+- npm i react-router
+- npm i swiper
+- npm i react-icons
+- npm install react-helmet-async
+- npm i react-toastify
+- npm install firebase
 
