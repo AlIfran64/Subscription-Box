@@ -4,7 +4,7 @@ A modern web application where users can explore and subscribe to curated produc
 
 ## 🔗 Live Site
 
-- 🌐 **Client:** [https://subscription-box-freshikart.web.app](https://subscription-box-freshikart.web.app)
+- 🌐 **Live:** [https://subscription-box-freshikart.web.app](https://subscription-box-freshikart.web.app)
 
 ---
 
