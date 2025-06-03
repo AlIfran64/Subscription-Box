@@ -1,4 +1,4 @@
-# Freshikart - Subscription Box
+# Freshikart - A Subscription Box Website
 
 A modern web application where users can explore and subscribe to curated product boxes. Built with a focus on design, performance, and simplicity.
 
