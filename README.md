@@ -23,7 +23,7 @@ A modern web application where users can explore and subscribe to curated produc
 **Frontend:**
 
 - React.js
-- React Router DOM
+- React Router
 - Tailwind CSS, CSS
 - Firebase (Auth & Hosting)
 
